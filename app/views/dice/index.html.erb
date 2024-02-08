@@ -6,9 +6,11 @@
 
 <% total = die1 + die2 %>
 
-<p> <%= die1 %> </p>
-
-<p> <%= die2 %> </p>
+<p> 
+<img src="/images/dice/<%= die1 %>.svg">
+<img src="/images/dice/<%= die2 %>.svg">
+</p>
 
 <p> The Total is <%= total  %> </p>
 
+<a href="/dice">Roll again, sucker...</a>

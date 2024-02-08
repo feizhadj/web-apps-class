@@ -1,0 +1,13 @@
+<h1> Man what the absolute malarkey fuck is this </h1>
+
+<% companies = Company.all %>
+
+<p> There are  <%= companies.count%> companies </p>
+
+<ul>
+
+<% for company in companies %>
+<li> <%= company["name"] %> </li>
+<% end %>
+
+</ul>
