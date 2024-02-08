@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get "/dice", :controller => "dice", :action => "index"
   #shorthand for this = equivalent to the above
   resources "companies"
+  resources "contacts"
 end

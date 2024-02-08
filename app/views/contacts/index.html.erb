@@ -1,0 +1,19 @@
+<h1> Man what the absolute malarkey fuck is this </h1>
+
+<% contacts = Contact.all %>
+
+<h1>Contacts</h1>
+
+<ul>
+  <% for contact in contacts %>
+    <%# find the contact's company: %>
+    <% company = Company.find_by({ "id" => contact["company_id"] }) %> 
+    
+    <%# "id" comes from Company table and inner_joins to contact model to create
+    a new company model%>
+
+    <li>
+      <%= contact["first_name"] %> <%= contact["last_name"] %> @ <%= company["name"] %>
+    </li>
+  <% end %>
+</ul>
